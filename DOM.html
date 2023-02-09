@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document Object Model</title>
+</head>
+<body>
+	<h1 id="title">AAAAA</h1>
+	<div id="subtitulo"></div>
+	<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad ea alias voluptatibus laboriosam deleniti. Deleniti deserunt vitae labore. Ipsa quo, voluptatem atque distinctio quas minima quaerat molestias cum dolorem doloribus.</p>
+	<p id="SecondP">Lorem, ipsum dolor, sit amet consectetur adipisicing elit. Assumenda, quia. Nisi totam eum facilis nobis aperiam excepturi voluptates, dicta, provident enim, fugiat sapiente? Architecto, exercitationem cupiditate voluptatem nobis, voluptates ipsum!</p>
+	<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti quas sit, sequi et sed consequuntur explicabo in blanditiis illo facilis molestiae id veniam exercitationem, fugit quisquam. Necessitatibus vitae recusandae cupiditate.</p>
+	<script>
+		let elementosP = document.getElementsByTagName("p");
+		let elementoP2 = document.getElementById("SecondP");
+
+		//Crear un nodo del DOM
+
+		//1.- Crear el elemento
+		let element0 = document.createElement("h2");
+		//2.- Crear un nodo de texto
+		let contenido = document.createTextNode("Titulo");
+		//3.- Añadir el nodo de texto al elemento
+		element0.appendChild(contenido);
+		//4.- Agregar atributos al elemento
+		element0.setAttribute("align","center");
+		//5.- Agregar el elemento al documento
+		document.getElementById("subtitulo").appendChild(element0);
+		//document.body.appendChild(element0);
+	</script>
+</body>
+</html>

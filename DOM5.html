@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Modificando estilos</title>
+	<style>
+		.thumb {
+			width: 200px;
+			transition: 300ms all ease;
+		}
+
+		.grande {
+			width: 400px;
+		}
+
+		.titulo {
+			border: 1px solid navy;
+			background: #b43ca6;
+			padding: 10px;
+		}
+
+		.tituloGrande {
+			font-size: 60px;
+		}
+	</style>
+</head>
+<body>
+	<h1 id="encabezado" class="">Encabezado</h1> 
+	<script>
+		let encabezado = document.getElementById("encabezado");
+		//encabezado.setAttribute("class","titulo tituloGrande");
+		encabezado.className = "titulo tituloGrande";
+		//encabezado.style.color = "navy";
+		//encabezado.style.background = "#bbb365";
+		//encabezado.style.paddingTop = "20px"
+
+		encabezado.className = encabezado.className.replace("tituloGrande","");
+	</script>
+</body>
+</html>

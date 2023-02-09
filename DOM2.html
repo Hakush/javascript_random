@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<ol id="lista">
+		<li>Lorem ipsum dolor sit amet.</li>
+		<li>Nihil deleniti enim sapiente recusandae porro totam assumenda delectus voluptatum </li>
+	</ol>
+
+	<script>
+		let element0 = document.createElement("li"),
+		 	contenido = document.createTextNode("nuevo texto");
+		element0.appendChild(contenido);
+
+		//implementacion by ID
+		//let padre = document.getElementById("lista");
+		//padre.appendChild(element0);
+
+		//implementacion by TagName
+		let padre = document.getElementsByTagName("li")[0].parentNode,
+			firstelement = document.getElementsByTagName("li")[0];
+
+		padre.insertBefore(element0, firstelement);
+
+	</script>
+</body>
+</html>

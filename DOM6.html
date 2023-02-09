@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>zoom</title>
+	<style>	
+		.thumb {
+			width: 200px;
+			transition: 300ms all ease;
+			display: block;
+		}
+
+		.grande {
+			width: 400px;
+		}
+	</style>	
+</head>
+<body>
+	<form action="">
+		<input type="button" value="Boton de zoom" onclick="zoom();">
+	</form>
+	
+	<img id="thumb" class="thumb" src="background-image2.jpg" width="400" alt="asjdhas">
+
+	<script>
+		function zoom(){
+			let img = document.getElementById("thumb");
+			if (img.className == "thumb grande") {
+				img.setAttribute("class","thumb");
+			} else {
+				img.setAttribute("class","thumb grande");
+			}
+		}	
+	</script>
+</body>
+</html>

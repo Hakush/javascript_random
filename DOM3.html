@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<ol id="lista">
+		<li id="primero">Lorem ipsum dolor sit amet.</li>
+		<li>Nihil deleniti enim sapiente recusandae porro totam assumenda delectus voluptatum </li>
+	</ol>
+	<script>
+		let primerElemento = document.getElementById("primero");
+		primerElemento.innerHTML = "<b> new text </b>";
+
+		
+		let element0 = document.createElement("li"),
+		 	contenido = document.createTextNode("nuevo texto");
+		
+		element0.appendChild(contenido);
+
+		let father = document.getElementsByTagName("li")[0].parentNode;
+		father.replaceChild(element0,primerElemento);
+
+		// father.removeChild(primerElemento);
+	</script>
+</body>
+</html>
