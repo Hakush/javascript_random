@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Eventos</title>
+</head>
+<body>
+	<button id="boton">Boton</button>
+	<input type="text" id="input">
+	<script>
+		(function() {
+			let saludo = function(e){
+				alert('Saludos, it works! ' + e.type + ' ' + e.target);
+			} 
+
+			function focus() {
+				alert('you are now focused');
+			}
+
+			function blur(){
+				alert('you are now unfocused');
+			}
+
+			let boton = document.getElementById("boton");
+			boton.addEventListener("click",saludo);
+
+			//previene que un link se ejecute por ej.
+			//si boton fuera un <a>
+			boton.preventDefault();
+
+			let input = document.getElementById("input");
+			input.addEventListener("focus",focus);
+			input.addEventListener("blur",blur);
+
+			input.removeEventListener("blur", blur);
+
+		}())
+	</script>
+</body>
+</html>

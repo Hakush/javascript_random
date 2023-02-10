@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Forms</title>
+</head>
+<body>
+	<form action="" name="formulario" method="get">
+		<input type="text" name="nombre" id="nombre" maxlength="30" placeholder="Nombres" required>
+		<br>
+
+		<input type="radio" name="sexo" id="hombre" value="Hombre" required> Hombre
+		<input type="radio" name="sexo" id="mujer" value="Mujer" required> Mujer
+		<br>
+
+		<input type="checkbox" name="terminos" id="terminos" required> Terminos y Condiciones
+		<br>
+
+		<input type="submit" id="btn" name="btn" value="Enviar">
+	</form>
+
+	<script>		
+		(function(){
+			let formulario = document.getElementsByName('formulario')[0],
+				elementos = formulario.elements,
+				boton = document.getElementsByName('btn');
+
+		}())
+	</script>
+</body>
+</html>
