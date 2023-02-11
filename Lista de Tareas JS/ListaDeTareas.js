@@ -1,22 +1,24 @@
 //(function(){
-	let formControlSelect = document.getElementById("exampleFormControlSelect2"),
-	newElement = document.createElement("option"),
-	newElementContent = document.createTextNode("newTask");
-	newElement.appendChild(newElementContent);
 
-	let newElement2 = document.createElement("option"),
-	newElement2Content = document.createTextNode("newTask2");
-	newElement2.appendChild(newElement2Content);
+	// Atributos/Variables
+	let formControlSelect = document.getElementById("exampleFormControlSelect2");
+	let rmBTN = document.getElementById('rmBTN'),
+		addBTN = document.getElementById('addBTN');
 
-	formControlSelect.add(newElement);
-	formControlSelect.add(newElement2);
-
-	let rmBTN = document.getElementById('rmBTN');
-
+	// Functions
 	function removeOption(e) {
 		formControlSelect.remove(formControlSelect.selectedIndex);
 	}
 
+	function addOption(e) {
+		let newElement = document.createElement("option"),
+		newElementContent = document.createTextNode(document.getElementById("exampleFormControlInput1").value);
+		newElement.appendChild(newElementContent);
+		formControlSelect.add(newElement);
+	}
+
+	// Eventos
 	rmBTN.addEventListener("click", removeOption);
+	addBTN.addEventListener("click", addOption);
 
 //}())
