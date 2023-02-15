@@ -84,7 +84,13 @@ let auxvar2 = document.getElementById("exampleID");
 element.textContent = "new text in element";
 element.innerHTML = "new text in element with <b>HTML code</b>"
 
+//Timers
 
+// Timeout, ejecuta una funcion luego de un tiempo en milisegundos
+setTimeout(function, timeInMiliseconds);
+
+// Interval, ejecuta una funcion cada cierto intervalo de tiempo en milisegundos
+setInterval(function, timeInMiliseconds);
 
 //////////////// SINTAXIS /////////////////
 
