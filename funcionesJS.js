@@ -92,6 +92,49 @@ setTimeout(function, timeInMiliseconds);
 // Interval, ejecuta una funcion cada cierto intervalo de tiempo en milisegundos
 setInterval(function, timeInMiliseconds);
 
+Array.filter()
+/*Podemos usar el método Array.filter() para encontrar los elementos dentro de un
+arreglo que cumplan con cierta condición. Por ejemplo, si queremos obtener todos
+los elementos de un arreglo de números que sean mayores a 10, podemos hacer
+lo siguiente: */
+let arreglo = [10, 11, 3, 20, 5];
+let mayorQueDiez = arreglo.filter(element => element > 10);
+console.log(mayorQueDiez) // resultado esperado: [11, 20]
+
+Array.find()
+/*Usamos el método Array.find() para encontrar el primer elemento que cumple
+cierta condición. Tal como el método anterior, toma un Callback como argumento y
+devuelve el primer elemento que cumpla la condición establecida. Usemos el
+método find en el arreglo del ejemplo anterior.*/
+let arreglo = [10, 11, 3, 20, 5];
+let existeElementoMayorQueDiez = arreglo.find(element => element > 10);
+console.log(existeElementoMayorQueDiez) // resultado esperado: 11
+
+Array.includes()
+/*El método includes() determina si un arreglo incluye un valor específico y devuelve
+verdadero o falso según corresponda. En el ejemplo anterior, si queremos revisar
+si 20 es uno de los elementos del arreglo, podemos hacer lo siguiente:*/
+let arreglo = [10, 11, 3, 20, 5];
+let incluyeVeinte = arreglo.includes(20);
+console.log(incluyeVeinte) // resultado esperado: true
+
+Array.indexOf()
+/*El método indexOf() devuelve el primer índice encontrado de un elemento
+específico. Devuelve -1 si el elemento no existe en el arreglo. Volvamos a nuestro
+ejemplo y encontremos el índice de 3 en el arreglo.*/
+let arreglo = [10, 11, 3, 20, 5];
+let indiceDeTres = arreglo.indexOf(3);
+console.log(indiceDeTres) // resultado esperado: 2
+
+/*La forma más fácil de aplicar una función a un array es utilizando el método apply(). Simplemente
+se tiene que aplicar apply() a la función pasando como primer parámetro null y
+como segundo parámetro el array. Así se puede obtener el máximo o mínimo de
+un array simplemente con el siguiente código.*/
+Math.max.apply(null, values) // resultado esperado: 5
+Math.min.apply(null, values) // resultado esperado: 1
+
+
+
 //////////////// SINTAXIS /////////////////
 
 function nombre(argumento) {

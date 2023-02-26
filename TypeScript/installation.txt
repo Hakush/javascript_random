@@ -1,0 +1,27 @@
+1/ Instalar Node
+Ir a la pagina oficial y decargarse el .msi, instalarlo
+2/ Instalar typescript
+npm install -g typescript
+3/Test en cmd
+tsc -v
+4/ tsc --init crea el archivo tsconfig.json
+5/ tsc archivo.ts compila el archivo a un archivo js
+6/ Incluirlo en un html y ejecutarlo para testear que funcione
+
+// Setear servidor de prueba
+
+1. Ejecutar el siguiente comando “npm install --global http-server”. A
+continuación, se creará la carpeta node_modules.
+2. Ejecutar el comando “npm init”. A continuación, se creará un
+archivo package.json //Apretar enter para confirmar todas las entradas correspondientes hasta que se cree el archivo
+3. Configurar la entrada "scripts" como sigue:
+ "scripts": {
+	"start": "http-server -p 8456"
+}
+
+4. Finalmente, ejecutar el comando “npm start” e ir a la url 127 especificada
+
+ctrl + C para detener el servidor
+
+5. Para ver los cambios que hacemos en typrescript, debemos ir a otra terminal, compilar con tsc o tsc app.ts, luego ir a la pagina de servidor local y actualizar con ctrl + F5.
+
